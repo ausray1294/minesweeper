@@ -1,11 +1,11 @@
-FROM app/
+FROM node:alpine
 
 WORKDIR /app
 
-COPY . app/
+COPY . /app
 
-RUN npm install -g nodemon && npm intall
+RUN npm install
 
-COPY . .
+EXPOSE 3000
 
-CMD ["npm", "run", "start:dev"]
+CMD ["npm", "start"]

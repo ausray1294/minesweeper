@@ -39,7 +39,7 @@ services:
     volumes:
       - type: bind
         source: ./backend
-        target: /app
+        target: /app/src
     command: npm run start:dev
     networks:
       - minesweeper-network
@@ -52,7 +52,7 @@ services:
       - '3000:3000'
     volumes:
       - type: bind
-        source: ./ui
+        source: ./client
         target: /client
     networks:
       - minesweeper-network
